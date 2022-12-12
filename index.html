@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
+<body ng-app="myApp">
 
 <div class="main-cont">
-    <div class="login-form d-flex flex-column justify-content-center" id="login">
+    <div class="login-form d-flex flex-column justify-content-center d-none" id="login">
         <h1 class="text-light">LOGIN</h1>
         <div class="inputField">
             <label for="username" class="text-light">Username</label>
@@ -33,7 +33,7 @@
             </div>
         </div>
     </div>
-    <div class="side-nav col-lg-1 d-none" id="sideNav">
+    <div class="side-nav col-lg-1" id="sideNav">
         <div class="side-btns">
             <h3 class="text-light mt-2">MENU</h3>
             <div class="menu-btns d-flex flex-column justify-content-start align-items-start mt-5" style="gap: 10px;">
@@ -44,8 +44,8 @@
             </div>
         </div>
     </div>
-    <div class="middle-form col-lg-11 d-none" id="MidForm">
-
+    <div class="middle-form col-lg-11 text-light" id="MidForm" ng-controller="myCtrl">
+        {{myWelcome}}
     </div>
 </div>
 <!--Scripts-->
