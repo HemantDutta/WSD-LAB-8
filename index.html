@@ -3,13 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-width=1.0">
-    <title>Hemant's Template</title>
+    <title>Angular SPA | WSD LAB 8</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js" integrity="sha512-y1qD3hz/IAf8W4+/UMLZ+CN6LIoUGi7srWJ3r1R17Hid8x0yXe+1B5ZelkaL1Mjzedzu0Cg3HBvDG02SAgSzBw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 
+<div class="main-cont">
+    <div class="login-form d-flex flex-column justify-content-center" id="login">
+        <h1 class="text-light">LOGIN</h1>
+        <div class="inputField">
+            <label for="username" class="text-light">Username</label>
+            <input type="text" name="username" id="username" class="form-control">
+        </div>
+        <div class="inputField">
+            <label for="password" class="text-light mt-2">Password</label>
+            <input type="password" name="password" id="password" class="form-control">
+        </div>
+        <div class="inputField">
+            <label for="img" class="mt-2 text-light">Profile Image</label>
+            <input type="file" name="img" id="img" class="form-control" style="background-color: transparent; border: none; color: white;">
+        </div>
+        <div class="btnField">
+            <div class="btnMen">
+                <button>Login</button>
+            </div>
+        </div>
+    </div>
+    <div class="side-nav col-lg-1 d-none" id="sideNav">
+        <div class="side-btns">
+            <h3 class="text-light mt-2">MENU</h3>
+            <div class="menu-btns d-flex flex-column justify-content-start align-items-start mt-5" style="gap: 10px;">
+                <div class="btnMen">
+                    <button>ADD <i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="btnMen"><button>VIEW <i class="fa-solid fa-database"></i></button></div>
+            </div>
+        </div>
+    </div>
+    <div class="middle-form col-lg-11 d-none" id="MidForm">
+
+    </div>
+</div>
 <!--Scripts-->
 <script src="assets/js/jquery-3.6.0.js"></script>
 <script src="assets/js/bootstrap.js"></script>

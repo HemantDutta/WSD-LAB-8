@@ -1,0 +1,54 @@
+body{
+    background: #252525;
+}
+.main-cont{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.side-nav{
+    height: 100vh;
+    background-color: #181818;
+}
+
+.middle-form{
+    height: 100vh;
+    background-color: #252525;
+}
+
+.login-form{
+    padding: 20px;
+    width: 40%;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btnMen{
+    color: white;
+    border-radius: 10px;
+    font-size: 1.2em;
+    margin-top: 1.2em;
+    padding: 10px;
+    width: 100%;
+    box-shadow: 2px 2px 5px black;
+    transition: all 0.4s ease;
+}
+
+.btnMen button {
+    background: transparent;
+    border: none;
+    color: white;
+    transition: all 0.4s ease;
+    width: 100%;
+}
+
+
+.btnMen:hover{
+    box-shadow: 2px 0px 2px black;
+}
+
+@media (max-width: 674px) {
+    .login-form{
+        width: 80%;
+    }
+}
