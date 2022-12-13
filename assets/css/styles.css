@@ -28,6 +28,10 @@ body{
     width: 100%;
 }
 
+#profileImg{
+    object-fit: cover;
+}
+
 .login-form{
     padding: 20px;
     width: 40%;
@@ -38,6 +42,11 @@ body{
     transition: all 0.8s ease;
     transform: translateY(40%);
     opacity: 0;
+}
+
+#btnResp{
+    color: red;
+
 }
 
 

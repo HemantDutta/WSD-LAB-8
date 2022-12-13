@@ -1,10 +1,11 @@
-
+let status = false;
 let app = angular.module('myApp', []);
 
 function onLoadAnim(){ //Transitions On Load
     let login = document.getElementById('login');
     login.style.transform = "translateY(0%)";
     login.style.opacity = "100";
+
 }
 
 function setCookie(cname, cvalue, exdays) { //for setting cookies in the browser
@@ -35,6 +36,12 @@ function login(){ //login function to set cookies of username and password! Also
 
     setCookie(nameField.id, nameField.value, 1);
     setCookie(passField.id, passField.value, 1);
+
+    let profImg = document.getElementById('profileImg');
+    profImg.src = imgSrc;
+
+    let userName = getCookie('username');
+    document.getElementById('profName').innerText = "Welcome "+userName;
 }
 
 //Saving the url of the image as a document object
@@ -80,6 +87,12 @@ function checkLogin(){
         }, 800)
     }
     else{
+        let profImg = document.getElementById('profileImg');
+        profImg.src = imgSrc;
+
+        let userName = getCookie('username');
+        document.getElementById('profName').innerText = "Welcome "+userName;
+
         login.style.opacity = "0";
         login.style.transform = "translateY(-50%)";
 
@@ -102,6 +115,56 @@ function checkLogin(){
 
     }
 }
+
+function checkUser(){
+    let name = document.getElementById('username');
+    let nameResp = document.getElementById('nameResp');
+
+    let nameReg = /^([a-zA-Z]){5,25}$/;
+    let nameValid = nameReg.test(name.value);
+    if (name.length === 0) {
+        nameResp.classList.remove("text-success");
+        nameResp.classList.add("text-danger");
+        nameResp.innerText = "Enter a username!"
+        status = false;
+    } else if (!nameValid) {
+        nameResp.classList.remove("text-success");
+        nameResp.classList.add("text-danger");
+        nameResp.innerText = "Username is invalid!"
+        status = false;
+    } else {
+        nameResp.classList.remove("text-danger");
+        nameResp.classList.add("text-success");
+        nameResp.innerText = "Username is valid";
+        status = true;
+    }
+
+    let password = document.getElementById('password').value;
+    let passResp = document.getElementById('passResp');
+
+    if(password.length === 0){
+        passResp.classList.remove("text-success");
+        passResp.classList.add("text-danger");
+        passResp.innerText = "Enter a Password!"
+        status = false;
+    }
+    else{
+        passResp.classList.remove("text-danger");
+        passResp.classList.add("text-success");
+        passResp.innerText = "Password is valid";
+        status = true;
+    }
+
+    if(status){
+        login();
+        checkLogin();
+    }
+    else{
+        document.getElementById('btnResp').innerText = "Please enter correct credentials!"
+    }
+}
+
+
 
 //Logout Function
 function logout(){
