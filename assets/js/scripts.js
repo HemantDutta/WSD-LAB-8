@@ -57,18 +57,46 @@ function checkLogin(){
     let midForm = document.getElementById('MidForm');
 
     if(logStatus.length === 0){
-        sideNav.classList.add('d-none'); //making sidebar and mid form invisible
-        midForm.classList.add('d-none');
+        sideNav.style.transform = "translateX(-50%)";
+        midForm.style.transform = "translateX(-50%)";
 
-        login.classList.remove('d-none'); //making login form visible
-        login.classList.add('d-flex');
+        sideNav.style.opacity = "0";
+        midForm.style.opacity = "0";
+
+        setTimeout(function (){
+            sideNav.classList.add('d-none'); //making sidebar and mid form invisible
+            midForm.classList.add('d-none');
+
+            login.classList.remove('d-none'); //making login form visible
+            login.classList.add('d-flex');
+
+            setTimeout(function (){
+                login.style.transform = "translate(0%)";
+                login.style.opacity = "100";
+            }, 200)
+        }, 800)
     }
     else{
-        login.classList.add('d-none');
-        login.classList.remove('d-flex');
+        login.style.opacity = "0";
+        login.style.transform = "translateY(-50%)";
 
-        sideNav.classList.remove('d-none');
-        midForm.classList.remove('d-none');
+        setTimeout(function (){
+            login.classList.add('d-none');
+            login.classList.remove('d-flex');
+
+
+            sideNav.classList.remove('d-none');
+            midForm.classList.remove('d-none');
+
+            setTimeout(function (){
+                sideNav.style.transform = "translateX(0%)";
+                midForm.style.transform = "translateX(0%)";
+
+                sideNav.style.opacity = "100";
+                midForm.style.opacity = "100";
+            }, 200)
+        }, 800)
+
     }
 }
 

@@ -8,11 +8,17 @@ body{
 .side-nav{
     height: 100vh;
     background-color: #181818;
+    transition: all 0.8s ease;
+    transform: translateX(-50%);
+    opacity: 0;
 }
 
 .middle-form{
     height: 100vh;
     background-color: #252525;
+    transition: all 0.8s ease;
+    transform: translateX(-50%);
+    opacity: 0;
 }
 
 .login-form{
