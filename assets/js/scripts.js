@@ -57,12 +57,14 @@ function checkLogin(){
     let midForm = document.getElementById('MidForm');
 
     if(logStatus.length === 0){
+        //Transition Out SideNav Midform
         sideNav.style.transform = "translateX(-50%)";
         midForm.style.transform = "translateX(-50%)";
 
         sideNav.style.opacity = "0";
         midForm.style.opacity = "0";
 
+        //timeout function to wait previous transitions to finish
         setTimeout(function (){
             sideNav.classList.add('d-none'); //making sidebar and mid form invisible
             midForm.classList.add('d-none');
@@ -70,6 +72,7 @@ function checkLogin(){
             login.classList.remove('d-none'); //making login form visible
             login.classList.add('d-flex');
 
+            //timeout to handle login animations
             setTimeout(function (){
                 login.style.transform = "translate(0%)";
                 login.style.opacity = "100";
