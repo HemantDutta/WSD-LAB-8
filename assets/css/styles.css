@@ -46,7 +46,14 @@ body{
 
 #btnResp{
     color: red;
+}
 
+.tabs .tab{
+    padding: 10px;
+    height: 250px;
+    box-shadow: 2px 2px 5px black;
+    background-color: #181818;
+    border-radius: 20px;
 }
 
 
