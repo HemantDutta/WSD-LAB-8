@@ -1,5 +1,6 @@
 body{
     background: #252525;
+    overflow: hidden;
 }
 .main-cont{
     flex-wrap: nowrap;
@@ -49,11 +50,17 @@ body{
 }
 
 .tabs .tab{
-    padding: 10px;
+    padding: 2em;
     height: 250px;
     box-shadow: 2px 2px 5px black;
     background-color: #181818;
     border-radius: 20px;
+}
+
+#tabProfImg{
+    height: 200px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 3px black;
 }
 
 
@@ -86,10 +93,6 @@ body{
     color: white;
     transition: all 0.4s ease;
     width: 100%;
-}
-
-.side-btns{
-
 }
 
 

@@ -116,6 +116,8 @@ function checkLogin(){
             }, 200)
         }, 800)
 
+        fillDetails();
+
     }
 }
 
@@ -167,6 +169,11 @@ function checkUser(){
     }
 }
 
+function fillDetails(){
+    let username = getCookie('username');
+    document.getElementById('profGreeting').innerText = `Hello There, ${username}`;
+    document.getElementById('tabProfImg').src = imgSrc;
+}
 
 
 //Logout Function
