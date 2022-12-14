@@ -59,6 +59,7 @@ function checkLogin(){
     let logStatus = getCookie('username');
     console.log(logStatus);
 
+    document.getElementById('mainCont').classList.remove('d-flex');
     let login = document.getElementById('login');
     let sideNav = document.getElementById('sideNav');
     let midForm = document.getElementById('MidForm');
@@ -89,6 +90,8 @@ function checkLogin(){
     else{
         let profImg = document.getElementById('profileImg');
         profImg.src = imgSrc;
+
+        document.getElementById('mainCont').classList.add('d-flex');
 
         let userName = getCookie('username');
         document.getElementById('profName').innerText = "Welcome "+userName;

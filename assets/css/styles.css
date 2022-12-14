@@ -2,7 +2,6 @@ body{
     background: #252525;
 }
 .main-cont{
-    display: flex;
     flex-wrap: nowrap;
 }
 .side-nav{
@@ -30,6 +29,7 @@ body{
 
 #profileImg{
     object-fit: cover;
+    max-width: 3rem;
 }
 
 .login-form{
