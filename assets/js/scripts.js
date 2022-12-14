@@ -91,7 +91,6 @@ function checkLogin(){
         let profImg = document.getElementById('profileImg');
         profImg.src = imgSrc;
 
-        document.getElementById('mainCont').classList.add('d-flex');
 
         let userName = getCookie('username');
         document.getElementById('profName').innerText = "Welcome "+userName;
@@ -103,7 +102,7 @@ function checkLogin(){
             login.classList.add('d-none');
             login.classList.remove('d-flex');
 
-
+            document.getElementById('mainCont').classList.add('d-flex');
             sideNav.classList.remove('d-none');
             midForm.classList.remove('d-none');
 
