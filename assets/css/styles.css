@@ -147,4 +147,7 @@ body{
     .btnMen{
         width: 25%;
     }
+    .col-xs-10{
+        width: 83.33%;
+    }
 }
