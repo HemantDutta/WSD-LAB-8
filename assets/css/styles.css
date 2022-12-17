@@ -57,6 +57,10 @@ body{
     border-radius: 20px;
 }
 
+.tabs .tab:last-child{
+    height: 500px;
+}
+
 #tabProfImg{
     height: 200px;
     border-radius: 20px;
