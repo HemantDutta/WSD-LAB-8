@@ -37,16 +37,16 @@
     </div>
     <div class="side-nav col-lg-1 d-none" id="sideNav">
         <div class="side-btns">
-            <h3 class="text-light mt-2">MENU</h3>
-            <div class="menu-btns d-flex flex-column justify-content-start align-items-start mt-5" style="gap: 10px;">
+            <h3 class="text-light mt-2 d-lg-block d-xs-none d-sm-none d-md-none">MENU</h3>
+            <div class="menu-btns d-flex" style="gap: 10px;">
                 <div class="btnMen">
-                    <button>ADD <i class="fa-solid fa-plus"></i></button>
+                    <button><span class="d-xs-none">ADD</span> <i class="fa-solid fa-plus"></i></button>
                 </div>
                 <div class="btnMen">
-                    <button>VIEW <i class="fa-solid fa-database"></i></button>
+                    <button><span class="d-xs-none">VIEW</span><i class="fa-solid fa-database"></i></button>
                 </div>
                 <div class="btnMen">
-                    <button onclick="logout()">Logout <i class="fa-solid fa-right-from-bracket"></i></button>
+                    <button onclick="logout()"><span class="d-xs-none">LOGOUT</span> <i class="fa-solid fa-right-from-bracket"></i></button>
                 </div>
             </div>
         </div>
@@ -57,20 +57,20 @@
                 <h3>DASHBOARD</h3>
             </div>
             <div class="profile d-flex justify-content-around" style="width: max-content; gap: 1em">
-                <h4 id="profName" class="text-light text-uppercase"></h4>
+                <h4 id="profName" class="text-light text-uppercase d-xs-none d-md-none d-sm-none d-lg-block"></h4>
                 <img src="" alt="profileImg" id="profileImg" style="border-radius: 100%; ">
             </div>
         </div>
         <div class="tabs mt-5">
             <div class="row m-0 justify-content-center" style="column-gap: 9em; row-gap: 2em;">
-                <div class="col-lg-5 tab">
+                <div class="col-lg-5 col-md-10 col-sm-10 tab">
 
                 </div>
-                <div class="col-lg-5 tab d-flex align-items-center justify-content-between">
+                <div class="col-lg-5 col-md-10 tab d-flex align-items-center justify-content-between">
                     <h4 id="profGreeting" class="text-light font-weight-bold"></h4>
                     <img src="" alt="profileImage" id="tabProfImg">
                 </div>
-                <div class="col-lg-11 tab">
+                <div class="col-lg-11 col-md-10 tab">
 
                 </div>
             </div>

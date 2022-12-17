@@ -3,7 +3,7 @@ body{
     overflow: auto;
 }
 .main-cont{
-    flex-wrap: nowrap;
+    /*flex-wrap: nowrap;*/
 }
 .side-nav{
     height: 100vh;
@@ -99,13 +99,52 @@ body{
     width: 100%;
 }
 
+.menu-btns{
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    margin-top: 5em;
+}
+
 
 .btnMen:hover{
     box-shadow: 2px 0px 2px black;
 }
 
+
+@media (max-width: 1171px){
+    .main-cont{
+        flex-direction: column;
+    }
+
+    .side-nav{
+        flex-direction: row;
+        height: 100px;
+        width: 100vw;
+    }
+
+    .menu-btns{
+        flex-direction: row;
+        justify-content: center;
+        width: 100vw;
+        margin-top: 0;
+    }
+
+    .btnMen{
+        width: 30%;
+    }
+}
+
 @media (max-width: 674px) {
     .login-form{
         width: 80%;
+    }
+
+    .d-xs-none{
+        display: none;
+    }
+
+    .btnMen{
+        width: 25%;
     }
 }
