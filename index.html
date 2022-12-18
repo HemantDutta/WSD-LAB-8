@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body ng-app="myApp" onload="onLoadAnim(), checkLogin()" onresize="remClass()">
+<body onload="onLoadAnim(), checkLogin()" onresize="remClass()">
 <div class="main-cont" id="mainCont">
     <div class="login-form d-flex flex-column justify-content-center" id="login">
         <h1 class="text-light">LOGIN</h1>
@@ -61,17 +61,14 @@
                 <img src="" alt="profileImg" id="profileImg" style="border-radius: 100%; ">
             </div>
         </div>
-        <div class="tabs mt-5">
+        <div class="tabs mt-5"  ng-app="msgApp">
             <div class="row m-0 justify-content-center" style="column-gap: 9em; row-gap: 2em;">
                 <div class="col-lg-5 col-md-10 col-sm-10 col-xs-10 tab" id="msgTab" ng-controller="msgCtrl" style="display: grid; place-items: center;">
                     <div class="beforeBtn">
                         <a href="#!msg" class="btn btn-outline-light" onclick="displayNotif()">Display Notifications</a>
                     </div>
-                    <div class="afterCont d-none" ng-view>
-                        <div class="notif" id="notif"></div>
-                        <div class="hideBtn">
-                            <a href="#" class="btn btn-outline-light">Hide Notifications</a>
-                        </div>
+                    <div class="afterCont" ng-view>
+
                     </div>
                 </div>
                 <div class="col-lg-5 col-md-10 col-xs-10 tab d-flex align-items-center justify-content-between" id="profTab">

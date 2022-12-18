@@ -1,7 +1,13 @@
 let status = false;
 let msgData;
 //Angular App and controllers
-let app = angular.module('myApp', []);
+let app = angular.module('msgApp', ["ngRoute"]);
+app.config(function ($routeProvider){
+    $routeProvider
+        .when("/msg", {
+            templateUrl: "msg.htm"
+        })
+})
 app.controller('msgCtrl',function ($scope, $http){
     $http.get('https://hemantdutta.github.io/JSON-Repo/WSD-LAB-8-MSG')
         .then(function (res){
