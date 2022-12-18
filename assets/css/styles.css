@@ -124,6 +124,10 @@ body{
         width: 100%;
     }
 
+    .middle-form{
+        width: 100%;
+    }
+
     .menu-btns{
         flex-direction: row;
         justify-content: center;
