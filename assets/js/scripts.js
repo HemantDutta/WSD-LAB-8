@@ -1,6 +1,12 @@
 let status = false;
-let app = angular.module('myApp', []);
 
+//Angular App and controllers
+let app = angular.module('myApp', []);
+app.controller('msgCtrl',{
+
+});
+
+//Loading animations
 function onLoadAnim(){ //Transitions On Load
     let login = document.getElementById('login');
     login.style.transform = "translateY(0%)";
