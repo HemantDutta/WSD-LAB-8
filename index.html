@@ -65,9 +65,9 @@
             <div class="row m-0 justify-content-center" style="column-gap: 9em; row-gap: 2em;">
                 <div class="col-lg-5 col-md-10 col-sm-10 col-xs-10 tab" id="msgTab" ng-controller="msgCtrl" style="display: grid; place-items: center;">
                     <div class="beforeBtn">
-                        <a href="#!msg" class="btn btn-outline-light" onclick="displayNotif()">Display Notifications</a>
+                        <a href="#!msg" class="btn btn-outline-light" onclick="displayNotif()" id="dispBtn">Display Notifications</a>
                     </div>
-                    <div class="afterCont" ng-view>
+                    <div class="afterCont d-flex flex-column justify-content-center align-items-center"  ng-view>
 
                     </div>
                 </div>

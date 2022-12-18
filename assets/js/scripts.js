@@ -213,7 +213,11 @@ function remClass(){
 }
 
 function displayNotif(){
+    document.getElementById('dispBtn').classList.add('d-none');
+}
 
+function hideNotif(){
+    document.getElementById('dispBtn').classList.remove('d-none');
 }
 
 
