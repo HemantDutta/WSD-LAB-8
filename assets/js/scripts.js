@@ -1,9 +1,14 @@
 let status = false;
-
+let msgData;
 //Angular App and controllers
 let app = angular.module('myApp', []);
-app.controller('msgCtrl',{
-
+app.controller('msgCtrl',function ($scope, $http){
+    $http.get('https://hemantdutta.github.io/JSON-Repo/WSD-LAB-8-MSG')
+        .then(function (res){
+            $scope.msgJson = res.data;
+            msgData = $scope.msgJson;
+            console.log($scope.msgJson);
+        })
 });
 
 //Loading animations
@@ -199,6 +204,10 @@ function remClass(){
         document.getElementById('MidForm').classList.add('col-lg-11');
         document.getElementById('menuH3').classList.remove('d-none');
     }
+}
+
+function displayNotif(){
+
 }
 
 

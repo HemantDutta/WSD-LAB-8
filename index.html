@@ -51,7 +51,7 @@
             </div>
         </div>
     </div>
-    <div class="middle-form col-lg-11 text-light d-none d-flex flex-column" id="MidForm" ng-controller="myCtrl">
+    <div class="middle-form col-lg-11 text-light d-none d-flex flex-column" id="MidForm">
         <div class="topBar d-flex justify-content-between p-2">
             <div class="dash">
                 <h3>DASHBOARD</h3>
@@ -63,9 +63,15 @@
         </div>
         <div class="tabs mt-5">
             <div class="row m-0 justify-content-center" style="column-gap: 9em; row-gap: 2em;">
-                <div class="col-lg-5 col-md-10 col-sm-10 col-xs-10 tab" id="msgTab" ng-controller="msgCtrl">
+                <div class="col-lg-5 col-md-10 col-sm-10 col-xs-10 tab" id="msgTab" ng-controller="msgCtrl" style="display: grid; place-items: center;">
                     <div class="beforeBtn">
-                        <a href="#!msg"></a>
+                        <a href="#!msg" class="btn btn-outline-light" onclick="displayNotif()">Display Notifications</a>
+                    </div>
+                    <div class="afterCont d-none" ng-view>
+                        <div class="notif" id="notif"></div>
+                        <div class="hideBtn">
+                            <a href="#" class="btn btn-outline-light">Hide Notifications</a>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-5 col-md-10 col-xs-10 tab d-flex align-items-center justify-content-between" id="profTab">
