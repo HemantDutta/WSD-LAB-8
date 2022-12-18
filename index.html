@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body ng-app="myApp" onload="onLoadAnim(), checkLogin()">
+<body ng-app="myApp" onload="onLoadAnim(), checkLogin()" onresize="remClass()">
 <div class="main-cont" id="mainCont">
     <div class="login-form d-flex flex-column justify-content-center" id="login">
         <h1 class="text-light">LOGIN</h1>
@@ -37,7 +37,7 @@
     </div>
     <div class="side-nav col-lg-1 d-none" id="sideNav">
         <div class="side-btns">
-            <h3 class="text-light mt-2 d-lg-block d-xs-none d-sm-none d-md-none">MENU</h3>
+            <h3 class="text-light mt-2" id="menuH3">MENU</h3>
             <div class="menu-btns d-flex" style="gap: 10px;">
                 <div class="btnMen">
                     <button><span class="d-xs-none">ADD</span> <i class="fa-solid fa-plus"></i></button>

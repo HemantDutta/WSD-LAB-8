@@ -182,5 +182,18 @@ function logout(){
     checkLogin();
 }
 
+function remClass(){
+    if(window.innerWidth<1172){
+        document.getElementById('sideNav').classList.remove('col-lg-1');
+        document.getElementById('MidForm').classList.remove('col-lg-11');
+        document.getElementById('menuH3').classList.add('d-none');
+    }
+    else{
+        document.getElementById('sideNav').classList.add('col-lg-1');
+        document.getElementById('MidForm').classList.add('col-lg-11');
+        document.getElementById('menuH3').classList.remove('d-none');
+    }
+}
+
 
 
