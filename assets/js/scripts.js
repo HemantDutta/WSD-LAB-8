@@ -12,7 +12,7 @@ app.controller('msgCtrl',function ($scope, $http){
     $http.get('https://hemantdutta.github.io/JSON-Repo/WSD-LAB-8-MSG')
         .then(function (res){
             $scope.msgJson = res.data;
-            msgData = $scope.msgJson;
+            msgData = res.data;
             console.log($scope.msgJson);
         })
 });
