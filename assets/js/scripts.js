@@ -1,15 +1,35 @@
 let status = false;
 let msgData;
+
 //Angular App and controllers
-let app = angular.module('msgApp', ["ngRoute"]);
-app.config(function ($routeProvider){
+let msgApp = angular.module('msgApp', ["ngRoute"]);
+msgApp.config(function ($routeProvider){
     $routeProvider
         .when("/msg", {
             templateUrl: "msg.htm"
-        })
-})
-app.controller('msgCtrl',function ($scope, $http){
+        });
+});
+msgApp.controller('msgCtrl',function ($scope, $http){
     $http.get('https://hemantdutta.github.io/JSON-Repo/WSD-LAB-8-MSG')
+        .then(function (res){
+            $scope.msgJson = res.data;
+            msgData = res.data;
+            console.log($scope.msgJson);
+        })
+});
+
+let dataApp = angular.module('dataApp', ["ngRoute"]);
+dataApp.config(function ($routeProvider){
+    $routeProvider
+        .when("/dataMan", {
+            templateUrl: "dataMan.htm"
+        })
+        .when("/dataSearch", {
+            templateUrl: "dataSearch.htm"
+        });
+});
+dataApp.controller('dataCtrl',function ($scope, $http){
+    $http.get('https://hemantdutta.github.io/JSON-Repo/WSD-LAB-8-DATA')
         .then(function (res){
             $scope.msgJson = res.data;
             msgData = res.data;

@@ -58,7 +58,7 @@
             </div>
             <div class="profile d-flex justify-content-around" style="width: max-content; gap: 1em">
                 <h4 id="profName" class="text-light text-uppercase d-xs-none d-md-none d-sm-none d-lg-block"></h4>
-                <img src="" alt="profileImg" id="profileImg" style="border-radius: 100%; ">
+                <img src="" alt="profileImg" id="profileImg" style="border-radius: 100%;">
             </div>
         </div>
         <div class="tabs mt-5"  ng-app="msgApp">
@@ -67,7 +67,7 @@
                     <div class="beforeBtn">
                         <a href="#!msg" class="btn btn-outline-light" onclick="displayNotif()" id="dispBtn">Display Notifications</a>
                     </div>
-                    <div class="afterCont d-flex flex-column justify-content-center align-items-center"  ng-view>
+                    <div class="afterCont d-flex flex-column justify-content-center align-items-center" ng-view>
 
                     </div>
                 </div>
@@ -75,8 +75,12 @@
                     <h4 id="profGreeting" class="text-light font-weight-bold"></h4>
                     <img src="" alt="profileImage" id="tabProfImg">
                 </div>
-                <div class="col-lg-11 col-md-10 col-xs-10 tab">
-
+                <div class="col-lg-11 col-md-10 col-xs-10 tab" id="dataTab" ng-app="dataApp">
+                    <div class="data" ng-controller="dataCtrl">
+                        <a href="#!dataMan">Man</a>
+                        <a href="#!dataSearch">Search</a>
+                        <div ng-view></div>
+                    </div>
                 </div>
             </div>
         </div>
