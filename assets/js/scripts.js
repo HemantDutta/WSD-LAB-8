@@ -37,6 +37,8 @@ dataApp.controller('dataCtrl',function ($scope, $http){
         })
 });
 
+angular.bootstrap(document.getElementById('dataTab'), ['dataApp']);
+
 //Loading animations
 function onLoadAnim(){ //Transitions On Load
     let login = document.getElementById('login');
