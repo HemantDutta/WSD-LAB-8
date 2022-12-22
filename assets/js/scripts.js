@@ -1,6 +1,6 @@
 let status = false;
 let msgData;
-
+let msgJson;
 //Angular App and controllers
 let msgApp = angular.module('msgApp', ["ngRoute"]);
 msgApp.config(function ($routeProvider){
@@ -32,7 +32,7 @@ dataApp.controller('dataCtrl',function ($scope, $http){
     $http.get('https://hemantdutta.github.io/JSON-Repo/WSD-LAB-8-DATA')
         .then(function (res){
             $scope.msgJson = res.data;
-            msgData = res.data;
+            msgJson = res.data;
             console.log($scope.msgJson);
         })
 });
