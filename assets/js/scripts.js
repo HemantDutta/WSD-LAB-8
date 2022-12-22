@@ -243,4 +243,12 @@ function hideNotif(){
 }
 
 
+function clickAdd(){
+    document.getElementById('dataMan').click();
+}
+
+function clickView(){
+    document.getElementById('searchMan').click();
+}
+
 

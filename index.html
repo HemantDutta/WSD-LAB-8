@@ -40,10 +40,10 @@
             <h3 class="text-light mt-2" id="menuH3">MENU</h3>
             <div class="menu-btns d-flex" style="gap: 10px;">
                 <div class="btnMen">
-                    <button><span class="d-xs-none">ADD</span> <i class="fa-solid fa-plus"></i></button>
+                    <button onclick="clickAdd()"><span class="d-xs-none">ADD</span> <i class="fa-solid fa-plus"></i></button>
                 </div>
                 <div class="btnMen">
-                    <button><span class="d-xs-none">VIEW</span> <i class="fa-solid fa-database"></i></button>
+                    <button onclick="clickView()"><span class="d-xs-none">VIEW</span> <i class="fa-solid fa-database"></i></button>
                 </div>
                 <div class="btnMen">
                     <button onclick="logout()"><span class="d-xs-none">Logout</span> <i class="fa-solid fa-right-from-bracket"></i></button>
@@ -77,8 +77,8 @@
                 </div>
                 <div class="col-lg-11 col-md-10 col-xs-10 tab" id="dataTab" ng-app="dataApp">
                     <div class="data" ng-controller="dataCtrl">
-                        <a href="#!dataMan">Man</a>
-                        <a href="#!dataSearch">Search</a>
+                        <a href="#!dataMan" id="dataMan" class="d-none">Man</a>
+                        <a href="#!dataSearch" id="searchMan" class="d-none">Search</a>
                         <div ng-view></div>
                     </div>
                 </div>
