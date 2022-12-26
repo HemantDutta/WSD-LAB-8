@@ -251,4 +251,18 @@ function clickView(){
     document.getElementById('searchMan').click();
 }
 
+function showInp(src){
+    console.log(src)
+    document.querySelectorAll(".srcInp").forEach(x=>{
+        if(x.id !== src){
+            console.log(x.value);
+            x.classList.add('d-none');
+        }
+        else{
+            console.log(x.value);
+            x.classList.remove('d-none');
+        }
+    })
+}
+
 
