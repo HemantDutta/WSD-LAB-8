@@ -11,7 +11,7 @@
             <tbody>
             <tr ng-repeat="x in msgJson | filter: test">
                 <td>{{x.id}}</td>
-                <td>{{x.Name}}</td>
+                <td>{{x.Name | uppercase}}</td>
                 <td>{{x.Category}}</td>
                 <td>{{x.Rating}}</td>
             </tr>
